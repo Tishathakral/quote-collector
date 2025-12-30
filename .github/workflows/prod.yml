@@ -27,7 +27,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: 100xdevs/school:${{ github.sha }}
+          tags: tishathakral/quote-collector:${{ github.sha }}
 
       - name: Clone staging-ops repo, update image tags, and push tags
         env: 
@@ -36,7 +36,7 @@ jobs:
           git clone https://github.com/Tishathakral/argo-deployment-gitOps-learning-.git
           cd argo-deployment-gitOps-learning-
 
-          sed -i 's|image: 100xdevs/school:.*|image: 100xdevs/school:{{ github.sha }}|' prod/school/deployment.yml
+          sed -i 's|image: tishathakral/quote-collector:.*|image: tishathakral/quote-collector:{{ github.sha }}|' manifest.yml
 
           git config user.name "Github Actions Bot"
           git config user.email "actions@github.com"
