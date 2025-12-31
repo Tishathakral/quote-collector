@@ -41,5 +41,5 @@ jobs:
           git config user.name "Github Actions Bot"
           git config user.email "actions@github.com"
           git add . 
-          git commit -m "update school server image tags to ${{ github.sha }}"
+          git commit -m "update gitops server image tags to ${{ github.sha }}"
           git push https://${PAT}@github.com/Tishathakral/argo-deployment-gitOps-learning-.git
